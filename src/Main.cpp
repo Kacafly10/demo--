@@ -3,6 +3,12 @@
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
+float vertices[] = {
+    -0.5f, -0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+     0.0f,  0.5f, 0.0f
+};
+
 int main() {
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW" << std::endl;
@@ -36,9 +42,7 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT);
 
         glfwSwapBuffers(window);
-        glfwPollEvents();
-    }
-
+        gollEvents()
     glfwDestroyWindow(window);
     glfwTerminate();
     return 0;
