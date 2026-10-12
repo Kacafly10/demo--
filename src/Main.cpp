@@ -5,12 +5,13 @@
 
 float vertices[] = {
     -0.5f, -0.5f, 0.0f,
-     0.5f, -0.5f, 0.0f,
-     0.0f,  0.5f, 0.0f
-};
+    0.5f, -0.5f, 0.0f,
+    0.0f, 0.5f, 0.0f};
 
-int main() {
-    if (!glfwInit()) {
+int main()
+{
+    if (!glfwInit())
+    {
         std::cerr << "Failed to initialize GLFW" << std::endl;
         return 1;
     }
@@ -19,8 +20,9 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "demo", nullptr, nullptr);
-    if (window == nullptr) {
+    GLFWwindow *window = glfwCreateWindow(800, 600, "demo", nullptr, nullptr);
+    if (window == nullptr)
+    {
         std::cerr << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
         return 1;
@@ -28,7 +30,8 @@ int main() {
 
     glfwMakeContextCurrent(window);
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
         std::cerr << "Failed to initialize GLAD" << std::endl;
         glfwDestroyWindow(window);
         glfwTerminate();
@@ -37,14 +40,14 @@ int main() {
 
     glViewport(0, 0, 800, 600);
 
-    while (!glfwWindowShouldClose(window)) {
+    while (!glfwWindowShouldClose(window))
+    {
         glClearColor(0.1f, 0.2f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         glfwSwapBuffers(window);
-        gollEvents()
-    glfwDestroyWindow(window);
-    glfwTerminate();
-    return 0;
-}
-
+        glfwPollEvents();
+        glfwDestroyWindow(window);
+        glfwTerminate();
+        return 0;
+    }
