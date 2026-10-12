@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/d/OD - ais/OneDrive - Afkaaruna Islamic School/Documents/demo--/src/glad.c" "CMakeFiles/demo.dir/src/glad.c.o" "gcc" "CMakeFiles/demo.dir/src/glad.c.o.d"
-  "/d/OD - ais/OneDrive - Afkaaruna Islamic School/Documents/demo--/src/Main.cpp" "CMakeFiles/demo.dir/src/Main.cpp.o" "gcc" "CMakeFiles/demo.dir/src/Main.cpp.o.d"
+  "/e/demo--/src/glad.c" "CMakeFiles/demo.dir/src/glad.c.o" "gcc" "CMakeFiles/demo.dir/src/glad.c.o.d"
+  "/e/demo--/src/Main.cpp" "CMakeFiles/demo.dir/src/Main.cpp.o" "gcc" "CMakeFiles/demo.dir/src/Main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

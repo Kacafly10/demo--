@@ -1,3 +1,3 @@
-/d/OD - ais/OneDrive - Afkaaruna Islamic School/Documents/demo--/build/CMakeFiles/demo.dir
-/d/OD - ais/OneDrive - Afkaaruna Islamic School/Documents/demo--/build/CMakeFiles/edit_cache.dir
-/d/OD - ais/OneDrive - Afkaaruna Islamic School/Documents/demo--/build/CMakeFiles/rebuild_cache.dir
+/e/demo--/build/CMakeFiles/demo.dir
+/e/demo--/build/CMakeFiles/edit_cache.dir
+/e/demo--/build/CMakeFiles/rebuild_cache.dir

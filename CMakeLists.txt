@@ -12,5 +12,5 @@ add_executable(demo
 
 include_directories(include)
 
-target_link_libraries(demo PRIVATE glad)
-target_link_libraries(demo PRIVATE GLFW)
+find_package(glfw3 CONFIG REQUIRED)
+target_link_libraries(demo PRIVATE glfw)
