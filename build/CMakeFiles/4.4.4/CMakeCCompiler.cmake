@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "/mingw64/bin/gcc.exe")
+set(CMAKE_C_COMPILER "C:/msys64/mingw64/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "16.2.0")
@@ -24,14 +24,14 @@ set(CMAKE_C_COMPILER_ARCHITECTURE_ID "x86_64")
 
 
 
-set(CMAKE_AR "/mingw64/bin/ar.exe")
-set(CMAKE_C_COMPILER_AR "/mingw64/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "/mingw64/bin/ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "/mingw64/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "/mingw64/bin/ld.exe")
+set(CMAKE_AR "C:/msys64/mingw64/bin/ar.exe")
+set(CMAKE_C_COMPILER_AR "C:/msys64/mingw64/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "C:/msys64/mingw64/bin/ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "C:/msys64/mingw64/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/msys64/mingw64/bin/ld.exe")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
-set(CMAKE_C_COMPILER_LINKER "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe")
+set(CMAKE_C_COMPILER_LINKER "C:/msys64/mingw64/x86_64-w64-mingw32/bin/ld.exe")
 set(CMAKE_C_COMPILER_LINKER_ARCHITECTURE_FLAGS "-m;i386pep")
 set(CMAKE_C_COMPILER_LINKER_ID "GNU")
 set(CMAKE_C_COMPILER_LINKER_VERSION "2.47.20260726")
@@ -80,7 +80,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include;C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include-fixed;C:/msys64/mingw64/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc;mingwex;kernel32")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0;C:/msys64/mingw64/lib/gcc;C:/msys64/mingw64/x86_64-w64-mingw32/lib;C:/msys64/mingw64/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
