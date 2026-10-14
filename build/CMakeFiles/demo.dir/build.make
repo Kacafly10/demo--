@@ -76,29 +76,29 @@ CMakeFiles/demo.dir/src/Main.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/Main.cpp.o: /e/demo--/src/Main.cpp
 CMakeFiles/demo.dir/src/Main.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/e/demo--/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo.dir/src/Main.cpp.o"
-	/c/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/src/Main.cpp.o -MF CMakeFiles/demo.dir/src/Main.cpp.o.d -o CMakeFiles/demo.dir/src/Main.cpp.o -c /e/demo--/src/Main.cpp
+	/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/src/Main.cpp.o -MF CMakeFiles/demo.dir/src/Main.cpp.o.d -o CMakeFiles/demo.dir/src/Main.cpp.o -c /e/demo--/src/Main.cpp
 
 CMakeFiles/demo.dir/src/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/Main.cpp.i"
-	/c/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /e/demo--/src/Main.cpp > CMakeFiles/demo.dir/src/Main.cpp.i
+	/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /e/demo--/src/Main.cpp > CMakeFiles/demo.dir/src/Main.cpp.i
 
 CMakeFiles/demo.dir/src/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/Main.cpp.s"
-	/c/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /e/demo--/src/Main.cpp -o CMakeFiles/demo.dir/src/Main.cpp.s
+	/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /e/demo--/src/Main.cpp -o CMakeFiles/demo.dir/src/Main.cpp.s
 
 CMakeFiles/demo.dir/src/glad.c.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/glad.c.o: /e/demo--/src/glad.c
 CMakeFiles/demo.dir/src/glad.c.o: CMakeFiles/demo.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/e/demo--/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/demo.dir/src/glad.c.o"
-	/c/msys64/mingw64/bin/gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/demo.dir/src/glad.c.o -MF CMakeFiles/demo.dir/src/glad.c.o.d -o CMakeFiles/demo.dir/src/glad.c.o -c /e/demo--/src/glad.c
+	/mingw64/bin/gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/demo.dir/src/glad.c.o -MF CMakeFiles/demo.dir/src/glad.c.o.d -o CMakeFiles/demo.dir/src/glad.c.o -c /e/demo--/src/glad.c
 
 CMakeFiles/demo.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/demo.dir/src/glad.c.i"
-	/c/msys64/mingw64/bin/gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /e/demo--/src/glad.c > CMakeFiles/demo.dir/src/glad.c.i
+	/mingw64/bin/gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /e/demo--/src/glad.c > CMakeFiles/demo.dir/src/glad.c.i
 
 CMakeFiles/demo.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/demo.dir/src/glad.c.s"
-	/c/msys64/mingw64/bin/gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /e/demo--/src/glad.c -o CMakeFiles/demo.dir/src/glad.c.s
+	/mingw64/bin/gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /e/demo--/src/glad.c -o CMakeFiles/demo.dir/src/glad.c.s
 
 # Object files for target demo
 demo_OBJECTS = \

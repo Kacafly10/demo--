@@ -6,19 +6,14 @@
 int x = 800;
 int y = 600;
 
-float vertices[] = {
-    -0.5f, -0.5f, 0.0f,
-    0.5f, -0.5f, 0.0f,
-    0.0f, 0.5f, 0.0f};
+float vertices[32];
 
 void lines(int line)
 {
-
 }
 
 void breakLines()
 {
-
 }
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
@@ -31,7 +26,8 @@ void processInput(GLFWwindow *window)
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
     {
         glfwSetWindowShouldClose(window, true);
-    } else if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS)
+    }
+    else if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS)
     {
         breakLines();
     }
@@ -43,6 +39,19 @@ MAIN FUNCTION
 
 int main()
 {
+    unsigned int VBO, VAO;
+
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
+        std::cout << "Failed to initialize GLAD" << std::endl;
+        return -1;
+    }
+
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -56,12 +65,6 @@ int main()
         return -1;
     }
     glfwMakeContextCurrent(window);
-
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
-    }
 
     glViewport(0, 0, x, y);
 
