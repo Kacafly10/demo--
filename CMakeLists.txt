@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(demo LANGUAGES C CXX)
+project(demo-- LANGUAGES C CXX)
 
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_C_STANDARD 23)
+set(CMAKE_CXX_STANDARD 23)
 
-add_executable(demo
+add_executable(demo--
     src/Main.cpp
     src/glad.c
 )
@@ -13,4 +13,4 @@ add_executable(demo
 include_directories(include)
 
 find_package(glfw3 CONFIG REQUIRED)
-target_link_libraries(demo PRIVATE glfw)
+target_link_libraries(demo-- PRIVATE glfw)
