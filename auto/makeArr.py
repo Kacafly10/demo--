@@ -4,23 +4,22 @@ import math
 n = input ("Enter the number of elements in the array: ")
 n = int(n)
 
-old_sum = 0.000001
+old_sum = 0
 array = []
 
-def makeArr():
+def makeArr(Nn):
     global old_sum
+    global n
     sub_array = []
     sum = 0.0
-    for i in range(n):
-        val = round(random.uniform(0, 1), 6)
-        sub_array.append(val)
+    for i in range(3):
+        val = round(random.uniform(Nn*1/n, (Nn+1)*1/n), 6)
+        array.append(val)
         sum += val
-    if sum < old_sum:
-        return makeArr()
     old_sum = sum
-    return sub_array
+    return
 
 for i in range(n):
-    array.append(makeArr())
+    makeArr(i)
 
 print(array)
