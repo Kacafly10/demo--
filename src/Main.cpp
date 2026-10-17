@@ -10,6 +10,8 @@ void processInput(GLFWwindow *window);
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+int indexs = 0;
+
 const char *vertexShaderSource = "#version 330 core\n"
                                  "layout (location = 0) in vec3 aPos;\n"
                                  "void main()\n"
@@ -22,8 +24,6 @@ const char *fragmentShaderSource = "#version 330 core\n"
                                    "{\n"
                                    "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
                                    "}\n\0";
-
-vertexData*
 
 int main()
 {
@@ -105,10 +105,12 @@ int main()
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
     float vertices[] = {
-        -0.5f, -0.5f, 0.0f, // left
-        0.5f, -0.5f, 0.0f,  // right
-        0.0f, 0.5f, 0.0f    // top
+        0.457325, -1.0, 0.0, -0.036421, -0.916667, 0.0, 0.397712, -0.833333, 
+0.0, 0.751513, -0.75, 0.0, -0.26012, -0.666667, 0.0, -0.507327, -0.583333, 0.0, -0.275733, -0.5, 0.0, -0.653958, -0.416667, 0.0, -0.765851, 
+-0.333333, 0.0, 0.450118, -0.25, 0.0, 0.769912, -0.166667, 0.0, 0.032971, -0.083333, 0.0, 0.351663, 0.0, 0.0, 0.461154, 0.083333, 0.0, 0.052376, 0.166667, 0.0, 0.51695, 0.25, 0.0, 0.415829, 0.333333, 0.0, 0.40255, 0.416667, 0.0, -0.191229, 0.5, 0.0, 0.26783, 0.583333, 0.0, -0.719774, 0.666667, 0.0, -0.674526, 0.75, 0.0, -0.394213, 0.833333, 0.0, -0.661387, 0.916667, 0.0, 0.07174, 1.0, 0.0   // top
     };
+
+    std::cout << "vertices size: " << sizeof(vertices) / sizeof(vertices[0]) << std::endl;
 
     unsigned int VBO, VAO;
     glGenVertexArrays(1, &VAO);
@@ -116,14 +118,11 @@ int main()
     // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
     glBindVertexArray(VAO);
 
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
     glEnableVertexAttribArray(0);
 
     // note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    
 
     // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
@@ -136,6 +135,17 @@ int main()
     // -----------
     while (!glfwWindowShouldClose(window))
     {
+        float verticesCurr[9];
+        for (int i = 0; i < 9; i++)
+        {
+            verticesCurr[i] = vertices[indexs + i];
+        }
+        indexs = (indexs <= 24) ? indexs + 3 : 0;
+
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(verticesCurr), verticesCurr, GL_STATIC_DRAW);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+
         // input
         // -----
         processInput(window);
